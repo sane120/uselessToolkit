@@ -4,10 +4,12 @@ import 'screens/flashlight.dart';
 import 'screens/level.dart';
 import 'screens/compass.dart';
 
+// MyApp default
 void main() => runApp(new MyApp());
 
+//Navbar
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // Root of the application/ Navbar
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

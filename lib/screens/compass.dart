@@ -8,6 +8,7 @@ class CompassPage extends StatefulWidget {
   _CompassPageState createState() => new _CompassPageState();
 }
 
+// Navbar and run Compass()
 class _CompassPageState extends State<CompassPage> {
   @override
   Widget build(BuildContext context) {
@@ -46,12 +47,13 @@ class _CompassState extends State<Compass> {
         _heading = x;
       });
 
+  // Styles the Text
   final TextStyle _style = TextStyle(
     color: Colors.teal,
     fontSize: 50,
     fontWeight: FontWeight.w200,
   );
-
+// Layout
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -60,6 +62,7 @@ class _CompassState extends State<Compass> {
   }
 }
 
+// Paints the Compass
 class CompassPainter extends CustomPainter {
   CompassPainter({@required this.angle}) : super();
 
@@ -69,7 +72,7 @@ class CompassPainter extends CustomPainter {
   Paint get _brush => new Paint()
     ..style = PaintingStyle.stroke
     ..strokeWidth = 3.4;
-
+// Paint final
   @override
   void paint(Canvas canvas, Size size) {
     Paint circle = _brush..color = Colors.indigo[600].withOpacity(0.8);
@@ -79,7 +82,7 @@ class CompassPainter extends CustomPainter {
     Offset center = Offset(size.width / 2, size.height / 2);
     Offset start = Offset.lerp(Offset(center.dx, radius), center, .4);
     Offset end = Offset.lerp(Offset(center.dx, radius), center, 0.1);
-
+// Logic that canvas moves
     canvas.translate(center.dx, center.dy);
     canvas.rotate(rotation);
     canvas.translate(-center.dx, -center.dy);

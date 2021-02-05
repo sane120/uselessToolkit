@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flashlight/flashlight.dart';
 
+// New Page
 class FlashlightPage extends StatefulWidget {
   @override
   _FlashlightPageState createState() => new _FlashlightPageState();
 }
 
+// Navbar and new page handling
 class _FlashlightPageState extends State<FlashlightPage> {
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class _FlashlightGoState extends State<FlashlightGo> {
     initFlashlight();
   }
 
+// Does the device have flashlight?
   initFlashlight() async {
     bool hasFlash = await Flashlight.hasFlashlight;
     print("Device has flash ? $hasFlash");
@@ -44,6 +47,7 @@ class _FlashlightGoState extends State<FlashlightGo> {
     });
   }
 
+// Buttons and function
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
