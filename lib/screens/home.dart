@@ -43,12 +43,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.of(context).pop();
                     Navigator.of(context).pushNamed('/compass');
                   }),
+              new ListTile(
+                  title: new Text("Device Info"),
+                  trailing: new Icon(Icons.design_services),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed('/deviceinfo');
+                  }),
             ],
           ),
         ),
         body: new Center(
-          child: new Text("Choose a tool from the top left.",
-              style: new TextStyle(fontSize: 20.0)),
+          child: Column(
+            children: [
+              SizedBox(height: 100,),
+              Image.asset('assets/images/numas_icon.png', width: 300,),
+              SizedBox(height: 100,),
+              new Text("Welcome",
+                  style: new TextStyle(fontSize: 20.0)),
+            ],
+          ),
         ));
   }
 }

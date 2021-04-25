@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toolkit/screens/deviceinfo.dart';
 import 'screens/home.dart';
 import 'screens/flashlight.dart';
 import 'screens/level.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/flashlight': (BuildContext context) => new FlashlightPage(),
         '/level': (BuildContext context) => new LevelPage(),
         '/compass': (BuildContext context) => new CompassPage(),
+        '/deviceinfo': (BuildContext context) => new devInfosPage(),
       },
     );
   }
