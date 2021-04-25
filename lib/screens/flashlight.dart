@@ -14,7 +14,7 @@ class _FlashlightPageState extends State<FlashlightPage> {
     return new Scaffold(
         appBar: new AppBar(
           title: new Text('Flashlight'),
-          backgroundColor: Color(0xFFf05454),
+          backgroundColor: Color.fromRGBO(0, 150, 136, 1),
         ),
         body: Container(
           child: FlashlightGo(),
@@ -52,6 +52,7 @@ class _FlashlightGoState extends State<FlashlightGo> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Color.fromRGBO(57, 62, 70, 1),
         body: Center(
             child: Column(
           children: <Widget>[

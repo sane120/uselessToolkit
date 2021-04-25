@@ -11,24 +11,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
         backgroundColor: Color(0xFFe8e8e8),
         appBar: new AppBar(
-          title: new Text("Toolkit"),
-          backgroundColor: Color(0xFFf05454),
+          title: new Text("The handy handy app"),
+          backgroundColor: Color.fromRGBO(0, 150, 136, 1),
         ),
         drawer: new Drawer(
           child: new ListView(
             children: <Widget>[
               new ListTile(
-                title: new Text("Choose your tool from the above"),
-                trailing: new Icon(Icons.handyman_outlined),
+                title: new Text("Menu"),
+                trailing: new Icon(Icons.help),
               ),
               new Divider(),
-              new ListTile(
-                  title: new Text("Level"),
-                  trailing: new Icon(Icons.design_services),
-                  onTap: () {
-                    Navigator.of(context).pop();
-                    Navigator.of(context).pushNamed('/level');
-                  }),
               new ListTile(
                   title: new Text("Flashlight"),
                   trailing: new Icon(Icons.highlight_outlined),
@@ -45,10 +38,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   }),
               new ListTile(
                   title: new Text("Device Info"),
-                  trailing: new Icon(Icons.design_services),
+                  trailing: new Icon(Icons.info),
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).pushNamed('/deviceinfo');
+                  }),
+              new ListTile(
+                  title: new Text("My Business Card"),
+                  trailing: new Icon(Icons.card_travel),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed('/card');
                   }),
             ],
           ),
@@ -59,8 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 100,),
               Image.asset('assets/images/numas_icon.png', width: 300,),
               SizedBox(height: 100,),
-              new Text("Welcome",
-                  style: new TextStyle(fontSize: 20.0)),
+              new Text("Welcome to my app!",
+                  style: new TextStyle(fontFamily: 'Pacifico',fontSize: 30.0)),
             ],
           ),
         ));

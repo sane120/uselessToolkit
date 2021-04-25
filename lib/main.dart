@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:toolkit/screens/deviceinfo.dart';
 import 'screens/home.dart';
 import 'screens/flashlight.dart';
-import 'screens/level.dart';
 import 'screens/compass.dart';
+import 'screens/card.dart';
 
 // MyApp default
 void main() => runApp(new MyApp());
@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/home': (BuildContext context) => new MyHomePage(),
         '/flashlight': (BuildContext context) => new FlashlightPage(),
-        '/level': (BuildContext context) => new LevelPage(),
         '/compass': (BuildContext context) => new CompassPage(),
         '/deviceinfo': (BuildContext context) => new devInfosPage(),
+        '/card': (BuildContext context) => new CardPage(),
       },
     );
   }

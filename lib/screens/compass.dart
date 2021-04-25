@@ -13,9 +13,10 @@ class _CompassPageState extends State<CompassPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        backgroundColor: Color.fromRGBO(57, 62, 70, 1),
         appBar: new AppBar(
           title: new Text('Compass'),
-          backgroundColor: Color(0xFFf05454),
+          backgroundColor: Color.fromRGBO(0, 150, 136, 1),
         ),
         body: Container(
           child: Compass(),
